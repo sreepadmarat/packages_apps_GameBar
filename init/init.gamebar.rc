@@ -20,7 +20,7 @@ on boot
     chmod 0660 /sys/class/kgsl/kgsl-3d0/temp
     
     # RAM frequency path (adjust paths)
-    chown system system /sys/devices/system/cpu/bus_dcvs/DDR/cur_freq
-    chmod 0660 /sys/devices/system/cpu/bus_dcvs/DDR/cur_freq
+    chown system system /sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/cur_freq
+    chmod 0660 /sys/class/devfreq/soc:qcom,cpu-cpu-ddr-bw/cur_freq
     
     

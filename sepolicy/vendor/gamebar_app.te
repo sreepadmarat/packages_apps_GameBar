@@ -12,3 +12,7 @@ allow gamebar_app vendor_sysfs_kgsl_gpuclk:file { read open getattr };
 allow zygote gamebar_app:process dyntransition;
 
 allow gamebar_app hal_graphics_mapper_hwservice:hwservice_manager find;
+
+# devfreq DDR frequency nodes
+allow gamebar_app vendor_sysfs_devfreq:dir r_dir_perms;
+allow gamebar_app vendor_sysfs_devfreq:file rw_file_perms;
